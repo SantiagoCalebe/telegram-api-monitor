@@ -1,0 +1,82 @@
+
+{
+  // Telegram configuration
+  "telegram": {
+    "parse_mode": "HTML"
+  },
+
+  // General monitoring settings
+  "monitor": {
+    // Interval between checks (minutes)
+    "interval_minutes": 60,
+
+    // Timezone used in reports, use your actual timezone!! ()
+    "timezone": "America/Sao_Paulo",
+
+    // Maximum API response time (seconds)
+    "timeout_seconds": 15,
+
+    // HTTP status codes considered successful
+    "success_status_codes": [
+      200,
+      201,
+      202,
+      204
+    ]
+  },
+
+  // Telegram message customization
+  "report": {
+    // Report title
+    "title": "MONITORING REPORT",
+
+    // Display date and time
+    "show_date": true,
+
+    // Display HTTP status code
+    "show_http_status": true,
+
+    // Display response time
+    "show_response_time": true,
+
+    // Display online/offline summary
+    "show_summary": true,
+
+    // Status indicators
+    "online_emoji": "🟢",
+    "offline_emoji": "🔴",
+    "error_emoji": "⚠️",
+
+    // Message footer
+    "footer": "[BOT] Telegram API Monitor.\nBy @santiagocalebe (https://github.com/santiagocalebe)"
+  },
+
+  // APIs to monitor
+  "apis": [
+    {
+      "name": "Customers API",
+      "url": "https://api.example.com/customers/health",
+      "enabled": true
+    },
+    {
+      "name": "Finance API",
+      "url": "https://finance.example.com/health",
+      "enabled": true
+    },
+    {
+      "name": "Orders API",
+      "url": "https://orders.example.com/health",
+      "enabled": true
+    },
+    {
+      "name": "Authentication API",
+      "url": "https://auth.example.com/health",
+      "enabled": true
+    },
+    {
+      "name": "Products API",
+      "url": "https://products.example.com/health",
+      "enabled": true
+    }
+  ]
+}
